@@ -16,21 +16,21 @@ const useBottomDrawerKeyboard = (
         const iosShowSubscription = Keyboard.addListener(
           'keyboardWillShow',
           e => {
-            let offset = getKeyboardOffset(
-              lastPosition.current,
-              e.endCoordinates.height,
-              safeTopOffset,
-            );
-            handleSnapToPosition(offset, {
-              resetLastPosition: false,
-            });
+            // let offset = getKeyboardOffset(
+            //   lastPosition.current,
+            //   e.endCoordinates.height,
+            //   safeTopOffset,
+            // );
+            // handleSnapToPosition(offset, {
+            //   resetLastPosition: false,
+            // });
             setKeyboardOpen(true);
           },
         );
         const iosHideSubscription = Keyboard.addListener(
           'keyboardWillHide',
           e => {
-            handleSnapToPosition(lastPosition.current);
+            // handleSnapToPosition(lastPosition.current);
             setKeyboardOpen(false);
           },
         );
@@ -44,21 +44,21 @@ const useBottomDrawerKeyboard = (
         const androidShowSubscription = Keyboard.addListener(
           'keyboardDidShow',
           e => {
-            let offset = getKeyboardOffset(
-              lastPosition.current,
-              e.endCoordinates.height,
-              safeTopOffset,
-            );
-            handleSnapToPosition(offset, {
-              resetLastPosition: false,
-            });
+            // let offset = getKeyboardOffset(
+            //   lastPosition.current,
+            //   e.endCoordinates.height,
+            //   safeTopOffset,
+            // );
+            // handleSnapToPosition(offset, {
+            //   resetLastPosition: false,
+            // });
             setKeyboardOpen(true);
           },
         );
         const androidHideSubscription = Keyboard.addListener(
           'keyboardDidHide',
           e => {
-            handleSnapToPosition(lastPosition.current);
+            // handleSnapToPosition(lastPosition.current);
             setKeyboardOpen(false);
           },
         );
